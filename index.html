@@ -51,7 +51,13 @@
 
   <script>
     setTimeout(function () {
-      window.location.href = "landingpage.html";
+      const currentUrl = window.location.href;
+
+  if (currentUrl.includes("index.html")) {
+    const newUrl = currentUrl.replace("index.html", "landingpage.html");
+    window.location.href = newUrl;
+  }
+
     }, 4000);
   </script>
 
@@ -66,4 +72,5 @@
 </script>
 </body>
 </html>
+
 
